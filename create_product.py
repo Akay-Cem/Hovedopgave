@@ -21,11 +21,11 @@ def insert_product(title, description, price, section, image_path):
 
 
 if __name__ == "__main__":
-    title = "Coca Cola 0.33 L"
-    description = "Iskold Cola"
-    price = 14
-    section = "Drikkevarer"
-    image_path = "/static/images/cola.jpeg"
+    title = "Bornholmder"
+    description = "Saftig burger af bornholms kødkvæg med cheddar ost og brioche boller. Kommer med sodavand og pommes frites "
+    price = 159
+    section = "Populær"
+    image_path = "/static/images/burgermenu.jpeg"
 
     if insert_product(title, description, price, section, image_path):
         print("Product inserted successfully")

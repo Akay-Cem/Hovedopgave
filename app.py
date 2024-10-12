@@ -271,7 +271,7 @@ def opret():
             flash("Email er desværre allerede taget 😩", "warning")
             return render_template("opret.html")
         cur.execute(
-            "INSERT INTO customers(first_name, sur_name, town, zip_code, email, password, created_at) VALUES (%s, %s,%s,%s,%s,%s, DATE_ADD(NOW(), INTERVAL 1 HOUR))",
+            "INSERT INTO customers(name, surname, town, zip, email, password, created_at) VALUES (%s, %s,%s,%s,%s,%s, DATE_ADD(NOW(), INTERVAL 1 HOUR))",
             (name, surname, town, zip, email, hashed_pw),
         )
 
@@ -344,7 +344,7 @@ def logout():
 
     current_user = cursor.fetchone()
     cursor.close()
-    flash(f"Tak for nu. {current_user[1]}. Vi ses igen snart 🙏 ", "success")
+    flash(f"Tak for nu, {current_user[1]}. Vi ses igen snart 🙏 ", "success")
     return redirect(url_for("login"))
 
 
