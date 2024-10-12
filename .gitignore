@@ -2,7 +2,4 @@ venv/
 .DS_Store
 __pycache__/
 .vscode/
-noter.txt
-.venv
 .env
-.pat
